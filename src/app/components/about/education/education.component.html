@@ -1,0 +1,19 @@
+<div class="relative border-l-4 border-gray-500/50 pl-6">
+    @for(edu of education; track $index; let index = $index) {
+        <div class="mb-10">
+            <span
+                class="absolute -left-3.5 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"
+                [ngStyle]="{ top: getPosition(index) }"
+            ></span>
+            <h3 class="text-xl font-semibold text-rose-600">{{ edu.degree }}</h3>
+            <p class="text-sm text-gray-500">{{ edu.institution }}</p>
+            <p class="text-sm text-gray-500">{{ edu.duration }}</p>
+            <ul class="list-disc list-inside mt-2 text-gray-700 text-sm leading-relaxed">
+                @for(item of edu.details; track $index){
+                    <li>{{ item }}</li>
+                }
+            </ul>
+        </div>
+    }
+</div>
+  
