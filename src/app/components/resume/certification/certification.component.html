@@ -1,0 +1,18 @@
+<div class="space-y-4">
+  @for(cert of certifications; track $index){
+    <div class="border rounded-lg">
+        <button class="w-full text-left p-4 bg-green-50 font-semibold text-green-700">
+          {{ cert.title }} – {{ cert.issuer }} ({{ cert.year }})
+        </button>
+        <div class="p-4 text-sm text-gray-700 bg-white border-t">
+          <ul class="list-disc list-inside">
+            @for(detail of cert.details; track $index){
+              <li>{{ detail }}</li>
+            }
+          </ul>
+        </div>
+      </div>   
+  }
+
+</div>
+
