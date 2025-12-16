@@ -1,0 +1,44 @@
+<section class="bg-gray-900 py-24" @fadeUp>
+
+  <div class="max-w-4xl mx-auto px-6">
+
+    <!-- Header -->
+    <h1 class="text-3xl md:text-4xl font-serif font-semibold text-gray-100 mb-4">
+      Tech Notes
+    </h1>
+
+    <p class="text-gray-400 mb-16">
+      Engineering insights, design decisions, and real-world lessons from
+      building full-stack and AI systems.
+    </p>
+
+    <!-- Notes list (safe even if empty) -->
+    <div class="space-y-12">
+
+      <!-- Example note (keep 1 or hide all initially) -->
+      <article class="bg-gray-800/40 border border-gray-700 rounded-2xl p-8">
+
+        <h2 class="text-xl font-semibold text-gray-100 mb-2">
+          Building a RAG-based OSS Risk Analyzer
+        </h2>
+
+        <p class="text-gray-400 text-sm mb-4">
+          How I designed an AI-powered system to analyze OSS vulnerabilities
+          using FastAPI, NLP, and CVE data.
+        </p>
+
+        <div class="flex items-center gap-4 text-sm">
+          <span class="text-gray-500">Jul 2025</span>
+          <a [routerLink]="['/technotes', 'oss-risk-analyzer']"
+            class="text-rose-400 hover:underline text-sm">
+            Read note →
+          </a>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>

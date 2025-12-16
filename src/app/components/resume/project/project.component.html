@@ -1,0 +1,128 @@
+<section class="mt-24" @fadeUp>
+
+  <h2 class="text-3xl font-serif font-semibold text-gray-100 mb-10">
+    Projects
+  </h2>
+
+  <div class="grid grid-cols-1 gap-10">
+
+    <!-- PROJECT 1 -->
+    <div class="bg-gray-800/40 border border-gray-700 rounded-2xl p-8">
+      <h3 class="text-lg font-semibold text-gray-100 mb-2">
+        AI-Powered OSS Risk Analyzer & RAG Chatbot
+      </h3>
+
+      <p class="text-sm text-gray-400 mb-4">
+        Jul 2025 – Present
+      </p>
+
+      <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mb-4">
+        <li>
+          Developed a <strong>Retrieval-Augmented Generation (RAG)</strong>
+          chatbot to analyze open-source software vulnerabilities.
+        </li>
+        <li>
+          Built <strong>FastAPI microservices</strong> with modular architecture
+          (knowledge_graph, nlp_explainer, risk_model, security_scanner).
+        </li>
+        <li>
+          Implemented <strong>regex + NLP hybrid extractors</strong> for
+          fixVersion and remediation recommendations.
+        </li>
+        <li>
+          Integrated <strong>Hugging Face NLP models</strong> for
+          human-friendly vulnerability explanations.
+        </li>
+        <li>
+          Designed <strong>Angular 19</strong> frontend with interactive
+          graph visualizations using ECharts and Chart.js.
+        </li>
+        <li>
+          Automated deployment using <strong>Docker and CI/CD pipelines</strong>.
+        </li>
+      </ul>
+
+      <p class="text-xs text-gray-500">
+        Tech: Angular 19, FastAPI (Python), PostgreSQL, Hugging Face NLP,
+        Docker, CI/CD, Linux
+      </p>
+      @if(isPublic){
+      <div class="flex gap-6 mt-5 text-sm">
+      <a
+          href="https://github.com/Alan-Babu/oss-risk-analyzer"
+          target="_blank"
+          class="text-rose-400 hover:underline"
+      >
+          GitHub
+      </a>
+
+      <a
+          href="#"
+          class="text-gray-400 hover:underline"
+      >
+          Architecture
+      </a>
+      </div>
+    }@else{
+        <span class="text-gray-500 text-sm">
+            GitHub (available on request)
+        </span>
+    }
+
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="bg-gray-800/40 border border-gray-700 rounded-2xl p-8">
+      <h3 class="text-lg font-semibold text-gray-100 mb-2">
+        Homeware Software – Vantiva
+      </h3>
+
+      <p class="text-sm text-gray-400 mb-4">
+        Feb 2023 – Present
+      </p>
+
+      <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mb-4">
+        <li>
+          Built embedded router UI for real-time device management.
+        </li>
+        <li>
+          Developed backend APIs using <strong>Lua</strong> for device interaction.
+        </li>
+        <li>
+          Enhanced usability with Angular components and
+          optimized UI performance.
+        </li>
+      </ul>
+
+      <p class="text-xs text-gray-500">
+        Tech: Angular, Lua, HTML, CSS, JavaScript, Linux
+      </p>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="bg-gray-800/40 border border-gray-700 rounded-2xl p-8">
+      <h3 class="text-lg font-semibold text-gray-100 mb-2">
+        Server Deployment Automation
+      </h3>
+
+      <p class="text-sm text-gray-400 mb-4">
+        Mar 2022 – Oct 2023
+      </p>
+
+      <ul class="list-disc list-inside text-gray-400 text-sm space-y-2 mb-4">
+        <li>
+          Automated JVM deployment and configuration in Linux environments.
+        </li>
+        <li>
+          Reduced manual server setup effort by
+          <strong>~40%</strong>.
+        </li>
+      </ul>
+
+      <p class="text-xs text-gray-500">
+        Tech: Linux, Shell Scripting
+      </p>
+    </div>
+
+  </div>
+</section>

@@ -1,6 +1,30 @@
-<header class="lg:px-16 px-4 flex flex-wrap items-center py-4 shadow-lg">
+<header
+  class="
+    sticky top-0 z-50
+    lg:px-16 px-4
+    flex flex-wrap items-center py-4
+    bg-gray-900/70 backdrop-blur
+    border-b border-gray-800
+  ">
   <div class="flex-1 flex justify-between items-center">
-    <img class="object-contain z-10 w-16 h-16" src="logo.png" alt="Logo" />
+    <div
+      class="
+        flex items-center justify-center
+        w-14 h-14
+        rounded-full
+        bg-white/5
+        ring-1 ring-white/15
+        backdrop-blur-md
+        shadow-[0_0_20px_rgba(255,255,255,0.06)]
+      "
+    >
+      <img
+        src="logo.png"
+        alt="Alan Babu logo"
+        class="w-9 h-9 object-contain
+              brightness-125 contrast-110"
+      />
+    </div>
   </div>
   <label for="menu-toggle" class="pointer-cursor md:hidden block" (click)="isMenuOpen = !isMenuOpen">
     <svg class="fill-current text-gray-200" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -12,7 +36,8 @@
 
   <div
     [class.hidden]="!isMenuOpen"
-    class="md:flex md:items-center md:w-auto w-full z-10"
+    class="md:flex md:items-center md:w-auto w-full z-10
+         bg-gray-900/95 md:bg-transparent"
     id="menu"
   >
     <nav>
@@ -20,7 +45,7 @@
         <li><a class="md:p-4 py-3 px-0 block hover:text-rose-500" routerLink="home" routerLinkActive="active text-rose-500">Home</a></li>
         <li><a class="md:p-4 py-3 px-0 block hover:text-rose-500" routerLink="about">About Me</a></li>
         <li><a class="md:p-4 py-3 px-0 block hover:text-rose-500" routerLink="resume">Resume</a></li>
-        <li><a class="md:p-4 py-3 px-0 block hover:text-rose-500" routerLink="Blog">Blog</a></li>
+        <li><a class="md:p-4 py-3 px-0 block hover:text-rose-500" routerLink="technotes">Tech Notes</a></li>
         <li><a class="md:p-4 py-3 px-0 block hover:text-rose-500 md:mb-0 mb-2" routerLink="contact">Contact</a></li>
       </ul>
     </nav>

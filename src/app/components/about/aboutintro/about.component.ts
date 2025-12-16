@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { EducationComponent } from "./education/education.component";
+
 
 @Component({
   selector: 'app-about',
-  imports: [EducationComponent],
+  imports: [],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

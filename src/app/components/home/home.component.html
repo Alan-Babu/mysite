@@ -1,12 +1,42 @@
-<div class="absolute hidden sm:block md:top-16 sm:top-[8%] top-[10%] xl:top-4 xl:left-[30%] lg:left-[35%] md:right-[20%] sm:left-[18%] left-[10%] overflow-hidden">
-    <img class="2xl:h-[760px] xl:h-[600px] md:h-[450px] sm:h-[480px]" src="https://techakim.com/sam/tg/7268/li/imgs/2.png" alt="Image" />
-</div>
-<div class="lg:px-16 px-4 pb-4 h-full flex flex-col sm:flex-row sm:items-center mt-10 sm:mt-0 text-white">
-    <!-- col -1  -->
-    <div class="w-full flex flex-col z-10">
-        <h4 class="text-lg font-semibold text-white xl:text-2xl">Hey There</h4>
-        <h1 class="2xl:text-8xl md:text-6xl sm:text-4xl text-3xl font-semibold font-serif mt-2">I'm</h1>
-        <h1 class="md:text-6xl sm:text-4xl text-3xl font-semibold font-serif">Alan Babu</h1>
-        <h4 class="text-rose-500 mt-4 lg:text-2xl xl:3xl"></h4>
+<section
+  class="relative min-h-screen flex items-center justify-center
+         bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
+
+  <div class="relative z-10 text-center max-w-3xl px-4" @fadeUp>
+
+    <h4 class="text-gray-400 text-lg mb-3">
+      Hey There 👋
+    </h4>
+
+    <h1
+      class="font-serif font-semibold
+             text-4xl sm:text-5xl md:text-7xl
+             text-gray-100">
+      I'm Alan Babu
+    </h1>
+
+    <h2
+      class="mt-4 text-xl sm:text-2xl md:text-3xl
+             text-rose-400 font-medium">
+      Full Stack Developer
+    </h2>
+
+    <div class="flex justify-center gap-4 mt-10">
+      <button
+        class="px-8 py-3 rounded-full
+               bg-rose-500 hover:bg-rose-600
+               transition font-semibold" (click)="onHireMe()">
+        Hire Me
+      </button>
+
+      <button
+        class="px-8 py-3 rounded-full
+               border border-gray-500
+               text-gray-300
+               hover:bg-gray-800 transition">
+        Download CV
+      </button>
     </div>
-</div>
+
+  </div>
+</section>

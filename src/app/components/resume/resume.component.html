@@ -1,20 +1,45 @@
-<div class="w-full min-h-screen flex items-center bg-gray-100 dark:bg-black">
-    <div class="w-full lg:w-[80%] mx-auto px-4 sm:px-10 lg:px-0 flex flex-col gap-4 pt-10 pb-20 dark:text-white">
-        <div class="flex flex-col gap-2 mb-2 md:mb-4">
-            <h2 class="text-4xl font-serif font-semibold">Experience</h2>
-            <span class="w-16 h-[4px] bg-rose-500 rounded"></span>
-            <span class="w-8 h-[4px] bg-rose-500 rounded"></span>
-        </div>
-        <app-experience></app-experience>
-        <div class="flex flex-col gap-2 mb-2 md:mb-4">
-            <h2 class="text-4xl font-serif font-semibold">Certifications</h2>
-            <span class="w-16 h-[4px] bg-rose-500 rounded"></span>
-            <span class="w-8 h-[4px] bg-rose-500 rounded"></span>
-        </div>
-        <app-certification></app-certification>
-        <div class="flex gap-4 justify-center sm:justify-start">
-            <button class="px-4 sm:px-6 py-2 bg-sky-600 rounded-full text-white font-bold">Download CV</button>
-            <button class="px-4 sm:px-6 py-2 bg-rose-600 rounded-full text-white font-bold">Hire me</button>
-        </div>
+<section class="bg-gray-900 py-24">
+  <div class="max-w-7xl mx-auto px-6 space-y-24">
+
+    <!-- EXPERIENCE -->
+    <div>
+      <h2 class="text-3xl font-serif font-semibold text-gray-100 mb-10">
+        Experience
+      </h2>
+      <app-experience></app-experience>
     </div>
-</div>
+
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-700/60 to-transparent"></div>
+
+    <!-- PROJECTS -->
+    <app-project></app-project>
+
+    <!-- divider -->
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-700/60 to-transparent"></div>
+    
+    <!-- SKILL SUMMARY -->
+    <app-skill-summary></app-skill-summary>
+
+    <!-- divider -->
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-700/60 to-transparent"></div>
+    
+    <!-- CERTIFICATIONS -->
+    <div>
+      <h2 class="text-3xl font-serif font-semibold text-gray-100 mb-10">
+        Certifications
+      </h2>
+      <app-certification></app-certification>
+    </div>
+
+    <!-- CTA -->
+    <div class="flex gap-4 pt-10">
+      <button class="px-6 py-3 rounded-full bg-rose-500 hover:bg-rose-600 transition font-semibold">
+        Download CV
+      </button>
+      <button class="px-6 py-3 rounded-full border border-gray-500 hover:bg-gray-500 transition" (click)="hireMe()">
+        Hire Me
+      </button>
+    </div>
+
+  </div>
+</section>
