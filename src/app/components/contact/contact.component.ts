@@ -1,6 +1,7 @@
 import { Component,inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder,Validators } from '@angular/forms';
 import { fadeUp } from '../../animations/fadeup.animation';
+import { MailserviceService } from '../../services/mailservice.service';
 
 
 @Component({
@@ -12,11 +13,11 @@ import { fadeUp } from '../../animations/fadeup.animation';
 })
 export class ContactComponent {
   private formBuilder = inject(FormBuilder);
+  private mailService = inject(MailserviceService);
   
   contactForm = this.formBuilder.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
-    phone: ['', Validators.required],
     message: ['', Validators.required]
   })
 
@@ -40,8 +41,16 @@ export class ContactComponent {
 
   // Handle form submission
   submitForm(): void {
-    console.log('Form submitted');
-    console.log(this.contactForm.value);
+    this.mailService.sendMail(this.contactForm.value).subscribe({
+      next: (response)=>{
+        alert(response.message);
+        this.contactForm.reset();
+        this.currentStep = 1;
+      },
+      error: (error)=>{
+        alert("There was an error sending your message. Please try again later");
+      }
+    });
   }
 
   // Update character count for the textarea
