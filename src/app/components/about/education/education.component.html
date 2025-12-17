@@ -7,40 +7,20 @@
   <!-- Container to ground the timeline -->
   <div class="bg-gray-800/40 border border-gray-700 rounded-2xl p-10">
 
-    <div class="relative border-l border-gray-600 pl-10 space-y-14 py-0.10">
-
+    <div class="relative border-l border-gray-600 pl-10 space-y-8">
+      @for(edu of education; track $index) {
       <!-- Item 1 -->
-      <div class="relative">
-        <span
-          class="absolute -left-[48px] top-1 w-4 h-4
-                 bg-rose-500 rounded-full">
-        </span>
+        <div class="relative">
+          <span [ngClass]="edu.class"> </span>
+          <h4 class="text-gray-100 font-semibold">
+            {{edu.degree}}
+          </h4>
 
-        <h4 class="text-gray-100 font-semibold">
-          M.Tech – Computing Systems & Infrastructure
-        </h4>
-
-        <p class="text-gray-400 text-sm mt-2">
-          BITS Pilani (WILP) · 2022 – 2025
-        </p>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="relative">
-        <span
-          class="absolute -left-[48px] top-1 w-4 h-4
-                 bg-gray-500 rounded-full">
-        </span>
-
-        <h4 class="text-gray-100 font-semibold">
-          BCA – Computer Applications
-        </h4>
-
-        <p class="text-gray-400 text-sm mt-2">
-          University of Mysore · 2018 – 2021
-        </p>
-      </div>
-
+          <p class="text-gray-400 text-sm mt-2">
+            {{edu.institution}} · {{edu.duration}}
+          </p>
+        </div>
+      }
     </div>
 
   </div>

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-certification',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './certification.component.html',
   styleUrl: './certification.component.scss'
 })

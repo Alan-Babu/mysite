@@ -9,52 +9,26 @@
     </div>
 
     <!-- EXPERIENCE : WIPRO -->
+    @for(exp of experiences; track $index) {
     <div class="flex justify-center">
       <span class="w-4 h-4 bg-rose-500 rounded-full mt-1"></span>
     </div>
 
     <div>
       <h3 class="text-lg font-semibold text-gray-100">
-        Full Stack Developer · Wipro Technologies Ltd
+        <span class="text-rose-400">{{exp.role}}</span> · {{exp.company}}
       </h3>
 
       <p class="text-sm text-gray-400 mb-3">
-        Dec 2021 – Present · Coimbatore, India
+        {{exp.duration}} · {{exp.location}}
       </p>
 
       <ul class="list-disc list-inside text-gray-400 text-sm space-y-2">
-        <li>
-          Designed and developed scalable
-          <strong>Angular (10–19)</strong> applications using
-          reusable, component-driven architecture.
-        </li>
-        <li>
-          Built and integrated <strong>REST APIs</strong> using
-          <strong>Python (FastAPI, Flask)</strong> and
-          <strong>Java (Spring Boot)</strong>.
-        </li>
-        <li>
-          Refactored legacy UI code into modular Angular components,
-          improving maintainability and readability.
-        </li>
-        <li>
-          Enhanced mobile responsiveness by
-          <strong>~35%</strong> using Tailwind CSS optimizations.
-        </li>
-        <li>
-          Reduced UI-related production defects by
-          <strong>~25%</strong> through cross-browser debugging and fixes.
-        </li>
-        <li>
-          Managed Linux server deployments and performed
-          <strong>JVM performance tuning</strong>.
-        </li>
-        <li>
-          Collaborated with cross-functional teams in
-          <strong>Agile / Scrum</strong> environments using Jira and Confluence.
-        </li>
+        @for(res of exp.responsibilities; track $index) {
+          <li [innerHTML]="res"></li>
+        }
       </ul>
     </div>
-
+  }
   </div>
 </section>

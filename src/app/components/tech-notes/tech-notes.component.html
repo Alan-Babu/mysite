@@ -12,31 +12,29 @@
       building full-stack and AI systems.
     </p>
 
-    <!-- Notes list (safe even if empty) -->
+    <!-- Notes list -->
     <div class="space-y-12">
-
-      <!-- Example note (keep 1 or hide all initially) -->
+      @for (note of techNotes; track $index) {
       <article class="bg-gray-800/40 border border-gray-700 rounded-2xl p-8">
 
         <h2 class="text-xl font-semibold text-gray-100 mb-2">
-          Building a RAG-based OSS Risk Analyzer
+          {{note.title}}
         </h2>
 
         <p class="text-gray-400 text-sm mb-4">
-          How I designed an AI-powered system to analyze OSS vulnerabilities
-          using FastAPI, NLP, and CVE data.
+          {{note.description}}
         </p>
 
         <div class="flex items-center gap-4 text-sm">
-          <span class="text-gray-500">Jul 2025</span>
-          <a [routerLink]="['/technotes', 'oss-risk-analyzer']"
+          <span class="text-gray-500">{{note.date}}</span>
+          <a [routerLink]="['/technotes', note.slug]"
             class="text-rose-400 hover:underline text-sm">
             Read note →
           </a>
         </div>
 
       </article>
-
+      }
     </div>
 
   </div>

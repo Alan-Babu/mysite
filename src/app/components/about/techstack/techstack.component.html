@@ -5,71 +5,19 @@
   </h3>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-
-    <!-- Card -->
-    <div
-      class="bg-gray-800/80 p-6 rounded-xl
-             border border-gray-700
-             transition-all duration-300
-             hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h4 class="text-rose-400 font-semibold mb-2">Frontend</h4>
-      <p class="text-gray-400 text-sm">
-        Angular (10–19), TypeScript, Tailwind CSS, HTML5, CSS3
-      </p>
-    </div>
-
-    <!-- Card -->
-    <div
-      class="bg-gray-800/80 p-6 rounded-xl
-             border border-gray-700
-             transition-all duration-300
-             hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h4 class="text-rose-400 font-semibold mb-2">Backend</h4>
-      <p class="text-gray-400 text-sm">
-        Python (FastAPI), Java, Spring Boot, REST APIs
-      </p>
-    </div>
-
-    <!-- Card -->
-    <div
-      class="bg-gray-800/80 p-6 rounded-xl
-             border border-gray-700
-             transition-all duration-300
-             hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h4 class="text-rose-400 font-semibold mb-2">AI / NLP</h4>
-      <p class="text-gray-400 text-sm">
-        Hugging Face, LangChain, RAG, FAISS, Sentence-BERT
-      </p>
-    </div>
-
-    <!-- Card -->
-    <div
-      class="bg-gray-800/80 p-6 rounded-xl
-             border border-gray-700
-             transition-all duration-300
-             hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h4 class="text-rose-400 font-semibold mb-2">Cloud & DevOps</h4>
-      <p class="text-gray-400 text-sm">
-        AWS, Azure, Linux, CI/CD, Git
-      </p>
-    </div>
-
-    <!-- Card -->
-    <div
-      class="bg-gray-800/80 p-6 rounded-xl
-             border border-gray-700
-             transition-all duration-300
-             hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h4 class="text-rose-400 font-semibold mb-2">Databases</h4>
-      <p class="text-gray-400 text-sm">
-        PostgreSQL, MySQL
-      </p>
-    </div>
-
+    @for(techs of techStacks; track $index) {
+      <!-- Card -->
+        <div
+          class="bg-gray-800/80 p-6 rounded-xl
+                border border-gray-700
+                transition-all duration-300
+                hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-rose-400 font-semibold mb-2">{{techs.Tech}}</h4>
+          <p class="text-gray-400 text-sm">
+            {{techs.Stacks.join(', ')}}
+          </p>
+        </div>
+    }
   </div>
 </section>

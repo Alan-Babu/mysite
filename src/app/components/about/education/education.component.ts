@@ -18,7 +18,8 @@ export class EducationComponent {
       details: [
         'Specialized in software architecture and systems design.',
         'Pursuing while working full-time.'
-      ]
+      ],
+      class:"absolute -left-[48px] top-1 w-4 h-4 bg-rose-500 rounded-full"
     },
     {
       degree: 'BCA – Bachelor of Computer Applications',
@@ -27,7 +28,8 @@ export class EducationComponent {
       details: [
         'Graduated with distinction.',
         'Core subjects: Data Structures, DBMS, Web Technologies.'
-      ]
+      ],
+      class: "absolute -left-[48px] top-1 w-4 h-4 bg-gray-500 rounded-full"
     }
   ];
 

@@ -4,16 +4,16 @@
     <div class="bg-gray-800/40 border border-gray-700 rounded-xl p-6">
 
       <h4 class="text-gray-100 font-semibold">
-        {{ cert.title }}
+        {{cert.title}}
       </h4>
 
       <p class="text-gray-400 text-sm mb-3">
-        {{ cert.issuer }} · {{ cert.year }}
+        {{cert.issuer}} · {{cert.year}}
       </p>
 
       <ul class="text-gray-400 text-sm list-disc list-inside space-y-1">
         @for (detail of cert.details; track $index) {
-          <li>{{ detail }}</li>
+          <li>{{detail}}</li>
         }
       </ul>
 
